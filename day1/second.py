@@ -1,12 +1,9 @@
 from collections import Counter
 
-list1, list2 = [], []
+from utils.helpers import load_file_into_arrays
 
-with open("input.txt", "r") as file:
-    for line in file:
-        a, b = line.split()
-        list1.append(int(a))
-        list2.append(int(b))
+list1, list2 = load_file_into_arrays("day1/input.txt")
+
 
 list1.sort()
 
