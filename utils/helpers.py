@@ -12,10 +12,19 @@ def load_file_into_arrays(file_name):
     return list1, list2
 
 
-def load_file_line_by_line(file_name):
+def load_file_line_by_line_int(file_name):
     file_path = Path(file_name).resolve()
     lists = []
     with file_path.open("r") as file:
         for line in file:
             lists.append([int(x) for x in line.strip().split()])
+    return lists
+
+
+def load_file_line_by_line(file_name):
+    file_path = Path(file_name).resolve()
+    lists = []
+    with file_path.open("r") as file:
+        for line in file:
+            lists.append(line.strip())
     return lists

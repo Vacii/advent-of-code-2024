@@ -1,4 +1,4 @@
-from utils.helpers import load_file_line_by_line
+from utils.helpers import load_file_line_by_line_int
 
 
 def is_safe_line(line):
@@ -25,7 +25,7 @@ def is_safe_line_with_dampener(line):
     return False
 
 
-lines = load_file_line_by_line("day2/input.txt")
+lines = load_file_line_by_line_int("day2/input.txt")
 
 number_of_safe = sum(1 for line in lines if is_safe_line(line))
 
